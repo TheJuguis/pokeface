@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pokeface.fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/profilePic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/lineaGris2"
+        android:src="@drawable/user"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:paddingTop="10dp"
+        android:textAlignment="textEnd"
+        android:paddingRight="10dp"
+        android:layout_width="0dp"
+        android:background="@color/lineaGris2"
+        android:layout_height="60dp"
+
+        android:text="Nombre"
+
+
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@id/profilePic"
+        app:layout_constraintRight_toLeftOf="@id/tvLastname"
+        app:layout_constraintTop_toTopOf="@id/profilePic"
+         />
+
+    <TextView
+        android:id="@+id/tvLastname"
+        android:background="@color/lineaGris2"
+        android:paddingTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+
+        android:text="Apellido"
+        android:paddingLeft="10dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/tvName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profilePic" />
+    <TextView
+        android:id="@+id/nivelLabel"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:background="@color/lineaGris"
+        android:text="Nivel"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/profilePic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/profilePic"
+        android:paddingLeft="40dp"
+        android:textAlignment="viewStart"
+        />
+
+    <TextView
+        android:id="@+id/pkmLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:paddingLeft="40dp"
+        android:text="Pokémon"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/lineaGris"
+        app:layout_constraintTop_toBottomOf="@id/nivelLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+    <TextView
+        android:id="@+id/tvNivel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="25dp"
+        android:textColor="@color/RojoGorra"
+        app:layout_constraintTop_toTopOf="@id/nivelLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/profilePic"
+        android:textAlignment="textEnd"
+        android:paddingRight="50dp"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tvNumPkmn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:paddingRight="50dp"
+
+        android:text="0"
+        android:textSize="25dp"
+        android:textColor="@color/RojoGorra"
+        app:layout_constraintTop_toTopOf="@id/pkmLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+
+
+         />
+
+
+
+    <TextView
+        android:id="@+id/tvnickName"
+        android:layout_width="0dp"
+        android:background="@color/lineaGris2"
+        android:layout_height="90dp"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/teal_200"
+        android:text="Nickname"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:paddingTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/profilePic"/>
+
+
+//Busqueda
+    <EditText
+        android:id="@+id/etUserIdToGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:hint="ID de entrenador a buscar"
+        android:textAlignment="center"
+        android:textColor="@color/lineaGris"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pkmLabel"
+        />
+    <Button
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:id="@+id/btnGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lineaGris2"
+        android:text="BUSCAR ENTRENADOR AMIGO"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUserIdToGet"
+        app:layout_constraintBottom_toTopOf="@+id/userNameGet"
+        />
+    <TextView
+        android:id="@+id/userNameGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:hint="NOMBRE DE ENTRENADOR:"
+        android:textSize="18dp"
+        android:textColor="@color/lineaGris"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGet"
+        app:layout_constraintBottom_toTopOf="@+id/userEmailGet"
+        />
+    <TextView
+        android:id="@+id/userEmailGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="NICKNAME DE ENTRENADOR:"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userNameGet"
+        />
+
+    <TextView
+        android:id="@+id/userLevelGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="NIVEL DE ENTRENADOR:"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userEmailGet"
+        />
+
+    <TextView
+        android:id="@+id/userNumCapturasGet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="POKEMONS EN POSESION:"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLevelGet"
+        />
+
+
+//Busqueda End
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

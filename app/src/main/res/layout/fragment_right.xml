@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lineaGris2"
+    tools:context="com.example.pokeface.fragments.RightFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/et_pokemon_to_search_for"
+        android:hint="Nombre o numero de pokemon"
+        android:textColorHint="@color/lineaGris"
+        android:layout_width="0dp"
+        android:background="@color/white"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp"
+        android:layout_marginTop="20dp"
+        android:text="Buscar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pokemon_to_search_for"
+        android:backgroundTint="@color/lineaGris"
+        />
+
+    <TextView
+        android:id="@+id/tv_pokemon_info"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+    android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text=""
+        android:textAlignment="textStart"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnCatchPkmn"
+        app:layout_constraintTop_toBottomOf="@id/btn_search"
+        android:textColor="@color/white"/>
+    <TextView
+    android:id="@+id/tvID"
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+    android:textAlignment="center"
+    android:textSize="25sp"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintRight_toLeftOf="@id/btnCatchPkmn"
+        app:layout_constraintLeft_toRightOf="@id/tv_pokemon_info"
+        app:layout_constraintTop_toBottomOf="@id/btn_search"
+        android:paddingTop="10dp"
+    />
+
+
+
+    <Button
+        android:id="@+id/btnCatchPkmn"
+        android:layout_width="53dp"
+        android:layout_height="51dp"
+
+        android:layout_marginRight="20dp"
+        android:background="#00000000"
+        app:icon="@drawable/like2"
+        app:iconTint="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pokemon_info"
+        app:layout_constraintLeft_toRightOf="@id/tvID"
+         />
+
+
+
+    <ImageView
+        android:id="@+id/ivPkmnSprite"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pokemon_info"
+
+        />
+
+
+    <TextView
+        android:id="@+id/labelType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPkmnSprite"/>
+    <TextView
+        android:id="@+id/labelHP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelType" />
+    <TextView
+        android:id="@+id/labelAtk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelHP" />
+    <TextView
+        android:id="@+id/labelAtkSpc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelAtk" />
+    <TextView
+        android:id="@+id/labelDef"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelAtkSpc" />
+    <TextView
+        android:id="@+id/labelDefSpc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelDef" />
+    <TextView
+        android:id="@+id/labelSpd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelDefSpc" />
+
+    <TextView
+        android:id="@+id/labelPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelSpd" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+
+
+        android:textColor="@color/teal_200"
+        android:textSize="18dp"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelType"
+        app:layout_constraintTop_toTopOf="@id/labelType"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:id="@+id/tvHP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelHP"
+        app:layout_constraintTop_toTopOf="@id/labelHP"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tvAtk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelAtk"
+        app:layout_constraintTop_toTopOf="@id/labelAtk"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tvAtkSpc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelAtkSpc"
+        app:layout_constraintTop_toTopOf="@id/labelAtkSpc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <TextView
+        android:id="@+id/tvDef"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelDef"
+        app:layout_constraintTop_toTopOf="@id/labelDef"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tvDefSpc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelDefSpc"
+        app:layout_constraintTop_toTopOf="@id/labelDefSpc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tvSpd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelSpd"
+        app:layout_constraintTop_toTopOf="@id/labelSpd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+
+        android:textSize="18dp"
+        android:textColor="@color/teal_200"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/labelPeso"
+        app:layout_constraintTop_toTopOf="@id/labelPeso"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

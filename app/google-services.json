@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "675412537971",
+    "project_id": "finalpoke-bcad0",
+    "storage_bucket": "finalpoke-bcad0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675412537971:android:9dcad72d5f690085af7006",
+        "android_client_info": {
+          "package_name": "com.example.basicnavigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675412537971-grmcpkd4ri7lhfqhmmdl84pjgorg7jdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDekylrfIICWICYMIeORysr8oi-HJVICf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675412537971-grmcpkd4ri7lhfqhmmdl84pjgorg7jdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
